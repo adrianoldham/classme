@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>index</title>
+    <script src="../lib/prototype.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/classme.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+        body {
+            background-color: white;
+        }
+        .white {
+            background-color: white;
+        }
+        .red {
+            background-color: red;
+        }
+        .green {
+            background-color: green;
+        }
+        .blue {
+            background-color: blue;
+        }
+        .black {
+            color: black;
+        }
+        .orange {
+            color: orange;
+        }
+        .purple {
+            color: purple;
+        }
+        .yellow {
+            color: yellow;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h2>Random colour changes</h2>
+    <p>Multiple elements can be independently targeted and randomly changed on page load</p>
+    <h2>Random colour changes</h2>
+    <p>Multiple elements can be independently targeted and randomly changed on page load</p>
+    <h2>Random colour changes</h2>
+    <p>Multiple elements can be independently targeted and randomly changed on page load</p>
+
+    <script type="text/javascript" charset="utf-8">
+        function runTest() {
+            var classMe = new ClassMe("body, #wrapper", {
+                classNames: ["white", "red", "green", "blue"]
+            });
+            
+           var classMeToo = new ClassMe("h2, p", {
+                classNames: ["black", "orange", "purple", "yellow"]
+            }); 
+        }
+        Event.observe(window, "load", runTest);
+    </script>
+</body>
+</html>
