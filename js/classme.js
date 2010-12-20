@@ -20,7 +20,7 @@ var ClassMe = Class.create({
         this.elements.each(function(element) {
             if(this.options.random) {
                 // Select random className from classNames array
-                var className = classNames[Math.floor(Math.random()*classNames.length)]
+                var className = classNames[Math.floor(Math.random()*classNames.length)];
 
                 // Add className to element
                 element.addClassName(className);
